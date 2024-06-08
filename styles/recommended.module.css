@@ -1,0 +1,94 @@
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 150px;
+  animation: fadeInUp 1s ease-out;
+}
+
+/* Ajuste para o texto Indicações */
+.recomend {
+  color: white;
+  font-size: 30px;
+  font-weight: 600;
+  margin: 20px 0; /* Adiciona espaço superior e inferior */
+}
+
+/* Ajuste para os ícones */
+.additionalButtons {
+  display: flex;
+  flex-wrap: wrap; /* Permite que os ícones quebrem para a próxima linha */
+  justify-content: center; /* Centraliza os ícones horizontalmente */
+  gap: 20px; /* Espaçamento entre os ícones */
+  margin-top: 20px; /* Adiciona espaço superior */
+}
+
+.buttonContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.additionalButtons button {
+  background: none;
+  border: none;
+}
+
+.additionalButtons img {
+  width: 150px; /* Ajuste o tamanho conforme necessário para dispositivos móveis */
+  height: auto;
+}
+
+.buttonTitle {
+  color: white;
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+/* Media Query para dispositivos móveis */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column; /* Altera a direção da flexbox para coluna */
+    align-items: center; /* Centraliza os itens */
+  }
+
+  .recomend {
+    font-size: 20px; /* Reduz o tamanho do texto para dispositivos móveis */
+  }
+
+  .additionalButtons {
+    margin-top: 20px; /* Adiciona espaço superior */
+    justify-content: center; /* Centraliza os ícones horizontalmente */
+    padding: 0 20px; /* Adiciona espaçamento interno aos ícones */
+  }
+
+  .additionalButtons img {
+    width: 100px; /* Ajuste o tamanho dos ícones para dispositivos móveis */
+  }
+}
+
+/* Adiciona a transição para a escala (scale) quando o botão é hoverado */
+.buttonContainer {
+  transition: transform 0.2s ease;
+}
+
+.image {
+  image-rendering: crisp-edges;
+  transition: transform 0.3s ease;
+}
+
+.image:hover,
+.image:focus {
+  transform: scale(1.1);
+}
